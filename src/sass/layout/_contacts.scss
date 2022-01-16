@@ -1,28 +1,35 @@
 .contacts {
   padding-bottom: 113px;
   background-color: var(--section-background-coloured-color);
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     padding-bottom: 158px;
   }
   @media screen and (min-width: 1280px) {
     padding-bottom: 165px;
-    background-color: var(--section-background-coloured-color);
-    background: url('../images/pc/footer-picture.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background: url('../images/pc/footer-picture-2x.png');
-    }
-    // &__buttons {
-    //   @include flex();
-    // }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    @media screen and (min-width: 768px) {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding-left: 115px;
+      padding-right: 115px;
+      background-color: var(--section-background-coloured-color);
+      background-image: url('../images/pc/footer-picture.png');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: contain;
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('../images/pc/footer-picture-2x.png');
+      }
+    }
   }
   &__list {
     margin-top: -84px;
@@ -31,10 +38,12 @@
     flex-direction: column;
     @media screen and (min-width: 768px) {
       flex-direction: row;
+      margin-top: -78px;
       margin-bottom: 81px;
     }
     @media screen and (min-width: 1280px) {
       margin-bottom: 86px;
+      margin-top: -102px;
     }
   }
   &__item {
@@ -44,25 +53,13 @@
   }
 }
 .category {
-  width: 220px;
   height: 427px;
-  padding-top: 43px;
-  padding-bottom: 43px;
-  padding-left: 20px;
-  padding-right: 21px;
-  margin-left: auto;
-  margin-right: auto;
-
-  // &:not(:last-child) {
-  //   margin-bottom: 20px;
-  // }
+  padding: (43px 20px 43px 21px);
 
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-    // margin-right: 50px;
-    // margin-left: 50px;
   }
   @media screen and (min-width: 768px) {
     margin: 0;
@@ -71,21 +68,16 @@
       margin-right: 20px;
     }
     height: 544px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 31px;
-    padding-right: 32px;
+    padding: (50px 31px 50px 32px);
   }
   @media screen and (min-width: 1280px) {
     width: 330px;
     height: 572px;
-    padding-top: 51px;
-    padding-bottom: 62px;
-    padding-left: 43px;
-    padding-right: 44px;
+    padding: (51px 43px 62px 44px);
   }
 
   &__name {
+    margin-bottom: 25px;
     width: 80px;
     height: 16px;
     background: var(--first-contact-background-color);
@@ -99,10 +91,15 @@
       height: 28px;
       @include font(500, 16px, 1.88, 0.04em);
       border-radius: 6px;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 32px;
     }
   }
   &__name-another {
-    width: 80px;
+    margin-bottom: 25px;
+    width: 130px;
     height: 16px;
     background: var(--second-contact-background-color);
     color: var(--section-text-on-dark-bg-color);
@@ -115,11 +112,15 @@
       height: 28px;
       @include font(500, 16px, 1.88, 0.04em);
       border-radius: 6px;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 32px;
     }
   }
   &__link {
     @include font(500, 12px, 1.5, 0.04em);
-    color: #907e82;
+    color: var(--section-text-second-color);
     @media screen and (min-width: 768px) {
       @include font(500, 14px, 1.86, 0em);
     }
@@ -130,20 +131,32 @@
 }
 
 .about-category {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   &__item {
-    width: 100%;
-    @include font(500, 12px, 1.83, 0.04em);
-    color: var(--section-text-main-color);
+    display: flex;
+    flex-direction: column;
+
     &:not(:last-child) {
       border-bottom: 1px solid #e1e1e1;
     }
-    margin-top: 25px;
+    &:not(:first-child) {
+      margin-top: 25px;
+    }
     @media screen and (min-width: 768px) {
-      @include font(500, 16px, 1.83, 0.04em);
-      margin-top: 30px;
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      &:not(:first-child) {
+        margin-top: 32px;
+      }
+    }
+  }
+  &__name {
+    @include font(500, 12px, 1.83, 0.04em);
+    color: var(--section-text-main-color);
+    @media screen and (min-width: 768px) {
+      @include font(500, 14px, 1.86, 0.04em);
     }
     @media screen and (min-width: 1280px) {
       @include font(500, 16px, 1.88, 0.04em);
@@ -191,12 +204,12 @@
   &__time {
     @include font(500, 12px, 1.83, 0em);
     color: var(--section-label-text-color);
-  }
-  @media screen and (min-width: 768px) {
-    @include font(500, 14px, 1.86, 0em);
-  }
-  @media screen and (min-width: 1280px) {
-    @include font(500, 16px, 1.88, 0.04em);
+    @media screen and (min-width: 768px) {
+      @include font(500, 14px, 1.86, 0em);
+    }
+    @media screen and (min-width: 1280px) {
+      @include font(500, 16px, 1.88, 0.04em);
+    }
   }
 }
 /*--------------BUTTONS-------------*/
