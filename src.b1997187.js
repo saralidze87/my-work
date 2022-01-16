@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./../images/pc/footer-picture.png":[["footer-picture.c99f0828.png","jBod"],"jBod"],"./../images/pc/footer-picture-2x.png":[["footer-picture-2x.34e562fa.png","mBi9"],"mBi9"]}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");
 },{"./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/Reach-the-edge-ice-cream/src.ad9848de.js.map
+//# sourceMappingURL=/Reach-the-edge-ice-cream/src.b1997187.js.map
